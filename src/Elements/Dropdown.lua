@@ -90,8 +90,8 @@ function Element:New(Idx, Config)
 	})
 
 	local DropdownScrollFrame = New("ScrollingFrame", {
-		Size = UDim2.new(1, -5, 1, -10),
-		Position = UDim2.fromOffset(5, 5),
+		Size = UDim2.new(1, -5, 1, -35),
+		Position = UDim2.fromOffset(5, 30),
 		BackgroundTransparency = 1,
 		BottomImage = "rbxassetid://6889812791",
 		MidImage = "rbxassetid://6889812721",
@@ -141,16 +141,16 @@ function Element:New(Idx, Config)
 	}, {
 		DropdownHolderFrame,
 		New("UISizeConstraint", {
-			MinSize = Vector2.new(170, 0),
+			MinSize = Vector2.new(170, 40),
 		}),
 	})
 
 	local Searchbox = require(Components.Textbox)(DropdownHolderCanvas, true)
-	Searchbox.Frame.Position = UDim2.new(0, 0.5, 0, -5)
-	Searchbox.Frame.AnchorPoint = Vector2.new(0.5, 1)
+	Searchbox.Frame.Position = UDim2.new(0, 0, 0, 5)
+	Searchbox.Frame.AnchorPoint = Vector2.new(0.5, 0)
 	Searchbox.Frame.Size = UDim2.fromOffset(160, 30)
 	Searchbox.Input.Text = ""
-	Searchbox.Input.PlaceholderText = "Test"
+	Searchbox.Input.PlaceholderText = "Search..."
 
 	table.insert(Library.OpenFrames, DropdownHolderCanvas)
 
@@ -171,7 +171,7 @@ function Element:New(Idx, Config)
 		if #Dropdown.Values > 10 then
 			DropdownHolderCanvas.Size = UDim2.fromOffset(ListSizeX, 392)
 		else
-			DropdownHolderCanvas.Size = UDim2.fromOffset(ListSizeX, DropdownListLayout.AbsoluteContentSize.Y + 10)
+			DropdownHolderCanvas.Size = UDim2.fromOffset(ListSizeX, DropdownListLayout.AbsoluteContentSize.Y + 45)
 		end
 	end
 
