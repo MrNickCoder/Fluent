@@ -145,8 +145,8 @@ function Element:New(Idx, Config)
 		}),
 	})
 
-	local Searchbox = require(Components.Textbox)(DropdownHolderCanvas, true)
-	Searchbox.Frame.Position = UDim2.new(0, 0, 0, 5)
+	local Searchbox = require(Components.Textbox)(DropdownHolderCanvas, false)
+	Searchbox.Frame.Position = UDim2.new(0, 0.5, 0, 5)
 	Searchbox.Frame.AnchorPoint = Vector2.new(0.5, 0)
 	Searchbox.Frame.Size = UDim2.fromOffset(160, 30)
 	Searchbox.Input.Text = ""
@@ -169,7 +169,7 @@ function Element:New(Idx, Config)
 	local ListSizeX = 0
 	local function RecalculateListSize()
 		if #Dropdown.Values > 10 then
-			DropdownHolderCanvas.Size = UDim2.fromOffset(ListSizeX, 392)
+			DropdownHolderCanvas.Size = UDim2.fromOffset(ListSizeX, 427)
 		else
 			DropdownHolderCanvas.Size = UDim2.fromOffset(ListSizeX, DropdownListLayout.AbsoluteContentSize.Y + 45)
 		end
