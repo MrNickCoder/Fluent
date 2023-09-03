@@ -144,6 +144,14 @@ function Element:New(Idx, Config)
 			MinSize = Vector2.new(170, 0),
 		}),
 	})
+
+	local Searchbox = require(Components.Textbox)(DropdownHolderCanvas, true)
+	Searchbox.Frame.Position = UDim2.new(0, 0.5, 0, -5)
+	Searchbox.Frame.AnchorPoint = Vector2.new(0.5, 1)
+	Searchbox.Frame.Size = UDim2.fromOffset(160, 30)
+	Searchbox.Input.Text = ""
+	Searchbox.Input.PlaceholderText = "Test"
+
 	table.insert(Library.OpenFrames, DropdownHolderCanvas)
 
 	local function RecalculateListPosition()
