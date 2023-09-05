@@ -90,8 +90,8 @@ function Element:New(Idx, Config)
 	})
 
 	local DropdownScrollFrame = New("ScrollingFrame", {
-		Size = UDim2.new(1, -5, 1, -10),
-		Position = UDim2.fromOffset(5, 5),
+		Size = UDim2.new(1, -5, 1, -45),
+		Position = UDim2.fromOffset(5, 40),
 		BackgroundTransparency = 1,
 		BottomImage = "rbxassetid://6889812791",
 		MidImage = "rbxassetid://6889812721",
