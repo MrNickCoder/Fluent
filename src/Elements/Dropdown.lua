@@ -148,7 +148,7 @@ function Element:New(Idx, Config)
 	local Searchbox = require(Components.Textbox)(DropdownHolderCanvas, false)
 	Searchbox.Frame.Position = UDim2.new(0, 0.5, 0, 5)
 	Searchbox.Frame.AnchorPoint = Vector2.new(0, 0)
-	Searchbox.Frame.Size = UDim2.fromOffset(160, 30)s
+	Searchbox.Frame.Size = UDim2.fromOffset(160, 30)
 	Searchbox.Input.Text = ""
 	Searchbox.Input.PlaceholderText = "Search..."
 
