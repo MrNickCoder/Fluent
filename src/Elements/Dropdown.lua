@@ -90,8 +90,8 @@ function Element:New(Idx, Config)
 	})
 
 	local DropdownScrollFrame = New("ScrollingFrame", {
-		Size = UDim2.new(1, -5, 1, -35),
-		Position = UDim2.fromOffset(5, 30),
+		Size = UDim2.new(1, -5, 1, -25),
+		Position = UDim2.fromOffset(5, 40),
 		BackgroundTransparency = 1,
 		BottomImage = "rbxassetid://6889812791",
 		MidImage = "rbxassetid://6889812721",
@@ -147,8 +147,8 @@ function Element:New(Idx, Config)
 
 	local Searchbox = require(Components.Textbox)(DropdownHolderCanvas, false)
 	Searchbox.Frame.Position = UDim2.new(0, 0.5, 0, 5)
-	Searchbox.Frame.AnchorPoint = Vector2.new(0.5, 0)
-	Searchbox.Frame.Size = UDim2.fromOffset(160, 30)
+	Searchbox.Frame.AnchorPoint = Vector2.new(0, 0)
+	Searchbox.Frame.Size = UDim2.fromOffset(160, 30)s
 	Searchbox.Input.Text = ""
 	Searchbox.Input.PlaceholderText = "Search..."
 
